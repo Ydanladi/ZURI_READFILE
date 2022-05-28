@@ -1,4 +1,4 @@
-# Read text from a file, and count the occurence of words in that text
+## Read text from a file, and count the occurence of words in that text
 # Example:
 # count_words("The cake is done. It is a big cake!") 
 # --> {"cake":2, "big":1, "is":2, "the":1, "a":1, "it":1}
@@ -23,13 +23,12 @@ def count_words():
     content = file.read().split()
     #create dictionary to assign each       
     keySum={} 
-    freq=0
     for i in (content):
-        if i not in keySum:
-            freq=1
-            keySum[i]=freq
-        elif i in keySum:
+        if i in keySum:
             freq+=1
+            keySum[i]+=1
+        else:    
+            freq=1
             keySum[i]=freq 
     print(keySum)
     file.close()
