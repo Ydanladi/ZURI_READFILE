@@ -16,7 +16,7 @@ def read_file_content(filename):
 #the return values of the function is save in var3
 var3=read_file_content(filename)
 print(var3)
-PROBLEM.2
+
 def count_words():
     #text = read_file_content("./story.txt")
     file = open("story.txt", "r")
